@@ -3,7 +3,7 @@
   <name>Pallavolo C9</name>
   <description>App ufficiale della Pallavolo C9 Arco Riva che ti permette di essere aggiornato in tempo reale dei risultati di Pallavolo</description>
   <author email="dev@cordova.apache.org" href="http://cordova.io">Pallavolo C9</author>
-  <content src="indexnew.html" />
+  <content src="index.html" />
   <access origin="*" />
   <vs:features />
   <preference name="SplashScreen" value="screen" />
