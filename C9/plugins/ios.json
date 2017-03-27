@@ -1,0 +1,37 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.telerik.plugins.nativepagetransitions": {
+            "PACKAGE_NAME": "com.pallavoloc9.app"
+        },
+        "cordova-plugin-appavailability": {
+            "PACKAGE_NAME": "com.pallavoloc9.app"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.pallavoloc9.app"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.pallavoloc9.app"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.pallavoloc9.app"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.pallavoloc9.app"
+        },
+        "cordova-plugin-x-toast": {
+            "PACKAGE_NAME": "com.pallavoloc9.app"
+        },
+        "phonegap-plugin-push": {
+            "SENDER_ID": "AIzaSyClNsAPBxmaSzfiMYoZNRzVFHDDKd8jT88",
+            "PACKAGE_NAME": "com.pallavoloc9.app"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+
+    <!--
+        Personalizzare, se necessario, i criteri di sicurezza del contenuto nel tag META seguente. Aggiungere 'unsafe-inline' a default-src per abilitare JavaScript inline.
+        Per dettagli, vedere http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' *;  object-src 'self' 'unsafe-inline' 'unsafe-eval' *; default-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'self' 'unsafe-inline' 'unsafe-eval' *; media-src 'self' 'unsafe-inline' 'unsafe-eval' *; connect-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+        
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link type="text/css" href="css/mmenu.css" rel="stylesheet" media="all" />
+    <link href="css/toggle_switch.css" rel="stylesheet" type="text/css" media="all" />
+
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/hammer.js"></script>
+    <script type="text/javascript" src="scripts/iscroll-probe.js"></script>
+
+    <title>Pallavolo C9</title>
+
+    <!-- Riferimenti a BlankCordovaApp1 -->
+</head>
+<body onload="loaded()">
+
+    <div id="header">
+        <div class="wrap">
+            <div class="header">
+                <div class="header_top">
+                    <div class="menu-ico"><a href="index.html"></a></div>
+                    <div class="setting-ico"><a href="notifiche.html"></a></div>
+                    <!--
+                        <div class="profile_details">
+                        <div id="loginContainer">
+                            <a id="loginButton" class=""><span>Me</span></a>
+                            <div id="loginBox">
+                                <form id="loginForm">
+                                    <fieldset id="body">
+                                        <div class="user-info">
+                                            <h4>Hello,<a href="#"> Username</a></h4>
+                                            <ul>
+                                                <li class="profile active"><a href="#">Profile </a></li>
+                                                <li class="logout"><a href="#"> Logout</a></li>
+                                                <div class="clear"></div>
+                                            </ul>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="profile_img">
+                            <a href=""><img src="images/profile_img40x40.jpg" alt="" />	</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>-->
+                    <div class="clear"></div>
+                    <div class="profile_logo">
+                        <a href=""><img src="images/logo.png" style="margin-top:10px" width="130" alt="" />	</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="scroller">
+            <div class="pullDown">
+                <span class="pullDownIcon">&nbsp;</span>
+                <span class="pullDownLabel">&nbsp;</span>
+            </div>
+            <div class="main">
+                <div class="wrap">
+                    <div class="column_middle">
+                        <div id="classifica" style="padding-top:20px;padding-bottom:15px;"></div>
+                        <div class="weather">
+                            <div id="cards" class="cards"><h3>INDIETRO</h3></div>
+                            <h3>Dettaglio<a href="index.html" id="close"><img src="images/close-window.png" alt="" /></a></h3>
+                            <div id="giornata" class="column_right_grid date_events">
+                            </div>
+                            <div id="dettaglio" class="altro_list">
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="index.html"><i><img src="images/home.png"></i> Home</a></li>
+                    <!--<li><a href="#"><i><img src="images/user.png"></i> Profilo</a></li>-->
+                    <li><a href="notifiche.html"><span><i><img src="images/settings.png" alt="" /></i> Notifiche</span><!--<label class="digits active">5</label><div class="clear"></div>--></a></li>
+                    <!--<li><a href="#"><span> <i><img src="images/screenshot-grey.png" alt=""></i> SelfieC9</span><div class="clear"></div></a></li>
+            <li><a href="indexold.html"><span> <i><img src="images/events.png"></i> Eventi</span><div class="clear"></div></a></li>
+            -->
+                </ul>
+            </nav>
+            <!-- Riferimento Cordova aggiunto all'app durante la compilazione. -->
+            <script src="cordova.js"></script>
+            <script src="scripts/platformOverrides.js"></script>
+            <script src="scripts/dettaglio.js"></script>
+             <script type="text/javascript">
+
+                $(function () {
+                    $('nav#menu').mmenu();
+                });
+                $('.cards').click(function (e) {
+                    slide('right', 'purple', 0, "index.html");
+
+                })
+                 /*
+                var myElement = document.getElementById('wrapper');
+
+                // create a simple instance
+                // by default, it only adds horizontal recognizers
+                var mc = new Hammer(myElement);
+                mc.on("panleft", function (ev) {
+                    slide('right', 'purple', 0, "index.html");
+                });
+                 */
+            </script>
+
+        </div>
+    </div>
+    <div class="processing"><!-- Place at bottom of page --></div>
+    <a href="index.html"><div class="aggiorna"><!-- Place at bottom of page --></div></a>
+</body>
+</html>

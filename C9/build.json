@@ -1,0 +1,16 @@
+{
+  "android": {
+    "release": {
+      "keystore": "my_keystore.keystore",
+      "storePassword": "PallavoloC9",
+      "alias": "pallavoloc9",
+      "password": "PallavoloC9",
+      "keystoreType": ""
+    }
+  },
+  "windows": {
+    "release": {
+      "packageCertificateKeyFile": "res\\native\\windows\\CordovaApp.pfx"
+    }
+  }
+}

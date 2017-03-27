@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta charset="utf-8" />
+        
+        <!--
+         Personalizzare, se necessario, i criteri di sicurezza del contenuto nel tag META seguente. Aggiungere 'unsafe-inline' a default-src per abilitare JavaScript inline.
+         Per dettagli, vedere http://go.microsoft.com/fwlink/?LinkID=617521
+         -->
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' *;  object-src 'self' 'unsafe-inline' 'unsafe-eval' *; default-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src 'self' 'unsafe-inline' 'unsafe-eval' *; media-src 'self' 'unsafe-inline' 'unsafe-eval' *; connect-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+            
+            <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+            <link href="css/toggle_switch.css" rel="stylesheet" type="text/css" media="all" />
+            <link type="text/css" href="css/mmenu.css" rel="stylesheet" media="all" />
+            <script src="scripts/jquery.js"></script>
+            <script src="scripts/bootstrap.min.js"></script>
+            <script src="scripts/jquery.touchwipe.min.js"></script>
+            <script type="text/javascript" src="scripts/iscroll-probe.js"></script>
+        <script type="text/javascript" src="scripts/jquery.mmenu.min.js"></script>
+            <title>Pallavolo C9</title>
+            
+            <!-- Riferimenti a BlankCordovaApp1 -->
+    </head>
+    <body>
+        
+        <div id="header">
+            <div class="wrap">
+                <div class="header">
+                    <div class="header_top">
+                        <div class="menu-ico"><a href="#menu"></a></div>
+                        <!--
+                         <div class="profile_details">
+                         <div id="loginContainer">
+                         <a id="loginButton" class=""><span>Me</span></a>
+                         <div id="loginBox">
+                         <form id="loginForm">
+                         <fieldset id="body">
+                         <div class="user-info">
+                         <h4>Hello,<a href="#"> Username</a></h4>
+                         <ul>
+                         <li class="profile active"><a href="#">Profile </a></li>
+                         <li class="logout"><a href="#"> Logout</a></li>
+                         <div class="clear"></div>
+                         </ul>
+                         </div>
+                         </fieldset>
+                         </form>
+                         </div>
+                         </div>
+                         <div class="profile_img">
+                         <a href=""><img src="images/profile_img40x40.jpg" alt="" />	</a>
+                         </div>
+                         <div class="clear"></div>
+                         </div>-->
+                        <div class="clear"></div>
+                        <div class="profile_logo">
+                            <a href=""><img src="images/logo.png" style="margin-top:10px" width="130" alt="" />	</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wrapper">
+            <div id="scroller">
+                <div class="pullDown">
+                    <span class="pullDownIcon">&nbsp;</span>
+                    <span class="pullDownLabel">&nbsp;</span>
+                </div>
+                <div class="main">
+                    <div class="wrap">
+                        <div class="column_middle">
+                            <div id="classifica"></div>
+                            <div class="weather">
+                                
+                                <div id="giornata">                                    
+                                </div>
+                                <div id="dettaglio" class="altro_list">
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <nav id="menu">
+
+                </nav>
+                <!-- Riferimento Cordova aggiunto all'app durante la compilazione. -->
+                <script src="scripts/menu.js"></script>
+                <script src="cordova.js"></script>
+                <script src="scripts/platformOverrides.js"></script>
+                <script src="scripts/classifica.js"></script>
+                
+                <script type="text/javascript">
+
+
+                document.addEventListener('backbutton', function () {
+                slide('right', 'purple', 0, "dettaglio.html?campionato=" + campionato + "&giornata=" + giornata);}, false);
+                function slide(direction, color, slowdownfactor, hrf) {
+                 if (!hrf) {
+                  setTimeout(function () {
+                 }, 20);
+                }
+   var theOptions = {
+       "direction": "right", // 'left|right|up|down', default 'left' (which is like 'next')
+       "duration": 500, // in milliseconds (ms), default 400
+       "slowdownfactor": 3, // overlap views (higher number is more) or no overlap (1), default 4
+       "iosdelay": 100, // ms to wait for the iOS webview to update before animation kicks in, default 60
+       "href": hrf,
+       "androiddelay": 150, // same as above but for Android, default 70
+       "winphonedelay": 250, // same as above but for Windows Phone, default 200,
+       "fixedPixelsTop": 0, // the number of pixels of your fixed header, default 0 (iOS and Android)
+       "fixedPixelsBottom": 0  // the number of pixels of your fixed footer (f.i. a tab bar), default 0 (iOS and Android)
+     };
+   window.plugins.nativepagetransitions.slide(
+       theOptions,
+       function () {
+       console.log('------------------- slide transition finished');
+       },
+       function (msg) {
+          alert('error: ' + msg);
+        });
+      }
+      $("#wrapper").touchwipe({
+        wipeLeft: function () { },
+        wipeRight: function () {
+               slide('right', 'purple', 0, "dettaglio.html?campionato=" + campionato + "&giornata="+giornata);
+                                        },
+        wipeUp: function () { //alert("up");
+                                        },
+        wipeDown: function () { //alert("down");
+                                        },
+        min_move_x: 20,
+        min_move_y: 20,
+        preventDefaultEvents: true
+        });
+                    </script>
+            </div>
+        </div>
+        <div class="processing"><!-- Place at bottom of page --></div>
+        <a href="index.html"><div class="aggiorna"><!-- Place at bottom of page --></div></a>
+    </body>
+</html>

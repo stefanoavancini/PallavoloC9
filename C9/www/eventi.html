@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' *;  object-src 'self' 'unsafe-inline' 'unsafe-eval'; default-src *; style-src 'self' 'unsafe-inline' *; media-src *; connect-src 'self' http://www.pallavoloc9.it/php/eventi-json.php">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <title>Pallavolo C9</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link type="text/css" href="css/mmenu.css" rel="stylesheet" media="all" />
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/iscroll-probe.js"></script>
+    <link type="text/css" href="css/mmenu.css" rel="stylesheet" media="all" />
+    <script type="text/javascript" src="scripts/jquery.mmenu.min.js"></script>
+
+</head>
+<body onload="">
+    <div id="header">
+        <div class="wrap">
+            <div class="header">
+                <div class="header_top">
+                    <div class="menu-ico"><a href="#menu"></a></div>
+                    <div class="clear"></div>
+                    <div class="profile_logo">
+                        <a href="index.html"><img src="images/logo.png" style="margin-top:10px" width="130" alt="" />	</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <div id="scroller" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+            <div class="main">
+                <div class="wrap">
+                    <div class="column_middle">
+                        <!--<div class="column_middle_grid1">
+                    <div class="profile_picture">
+                        <a href=""><img src="images/logo.png" alt="" />	</a>
+
+                    </div>
+                </div>-->
+                        <div id="cards"></div>
+
+                        <div class="weather">
+                            <h3>Eventi</h3>
+
+                            <div id="eventi" class="temp_list">
+
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>         
+        </div>
+    </div>
+    <nav id="menu">
+
+    </nav>
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+    <script src="scripts/eventi.js"></script>
+    <div class="processing"><!-- Place at bottom of page --></div>
+    <a href="index.html"><div class="aggiorna"><!-- Place at bottom of page --></div></a>
+</body>
+</html>

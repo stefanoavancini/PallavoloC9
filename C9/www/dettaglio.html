@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="iso-8859-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' *;  object-src 'self' 'unsafe-inline' 'unsafe-eval'; default-src *; style-src 'self' 'unsafe-inline' *; media-src *; connect-src 'self' http://www.pallavoloc9.it/php/dettaglio-json.php http://www.pallavoloc9.it/php/update.php">
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <title>Pallavolo C9</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link type="text/css" href="css/mmenu.css" rel="stylesheet" media="all" />
+    <script type="text/javascript" src="scripts/jquery.js"></script>
+    <script type="text/javascript" src="scripts/iscroll-probe.js"></script>
+    <script src="scripts/jquery.touchwipe.min.js"></script>
+    <link type="text/css" href="css/mmenu.css" rel="stylesheet" media="all" />
+    <script type="text/javascript" src="scripts/jquery.mmenu.min.js"></script>
+   
+</head>
+<body onload="">
+    <div id="header">
+        <div class="wrap">
+            <div class="header">
+                <div class="header_top">
+                    <div class="menu-ico"><a href="#menu"></a></div>
+                    <div class="clear"></div>
+                    <div class="profile_logo">
+                        <a href="index.html"><img src="images/logo.png" style="margin-top:10px" width="130" alt="" />	</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id="cards"></div>
+    <div id="wrapper">
+        <div id="scroller" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+            <div class="main">
+                <div class="wrap">
+                    <div class="column_middle">
+                        <div id="classifica" style="padding-top:20px;padding-bottom:15px;"></div>
+                        <div class="weather">
+                            <h3>Dettaglio<a href="index.html" id="close"><img src="images/close-window.png" alt="" /></a></h3>
+                            <div id="giornata" class="column_right_grid date_events">
+                            </div>
+                            <div id="dettaglio" class="altro_list">
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+    <nav id="menu">
+
+    </nav>
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+    <script src="scripts/link_bottoni.js"></script>
+    <script src="scripts/dettaglio.js"></script>
+    <script type="text/javascript">
+
+                $('.cards').click(function (e) {
+                    //slide('right', 'purple', 0, "index2.html");
+                    var options = {
+                        "direction": "up", // 'left|right|up|down', default 'left' (which is like 'next')
+                        "duration": 500, // in milliseconds (ms), default 400
+                        "slowdownfactor": 4, // overlap views (higher number is more) or no overlap (1), default 3
+                        "iosdelay": 100, // ms to wait for the iOS webview to update before animation kicks in, default 50
+                        "androiddelay": 150  // same as above but for Android, default 50
+                    };
+
+                    window.plugins.nativepagetransitions.slide(
+                        options,
+                        function (msg) { console.log("success: " + msg) }, // called when the animation has finished
+                        function (msg) { console.log("error: " + msg) } // called in case you pass in weird values
+                    );
+                })
+                 /*
+                var myElement = document.getElementById('wrapper');
+
+                // create a simple instance
+                // by default, it only adds horizontal recognizers
+                var mc = new Hammer(myElement);
+                mc.on("panleft", function (ev) {
+                    slide('right', 'purple', 0, "index.html");
+                });*/
+                 
+    </script>
+    <div class="processing"><!-- Place at bottom of page --></div>
+    <a href="index.html"><div class="aggiorna"><!-- Place at bottom of page --></div></a>
+</body>
+</html>
